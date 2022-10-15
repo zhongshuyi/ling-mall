@@ -10,15 +10,15 @@
 
 -   规范要求
 
-    -   [中文排版规范](1.规范要求\1中文排版规范.md)
-    -   [README 文件规范](1.规范要求\2README文件规范.md)
-    -   [git 提交信息规范](1.规范要求\3git提交信息规范.md)
-    -   [语义化版本规范](1.规范要求\4语义化版本规范.md)
+    -   [中文排版规范](1.standard/1.document-style-guide.md)
+    -   [README 文件规范](1.standard/2.readme-standard.md)
+    -   [git 提交信息规范](1.standard/3.git-commit-standard.md)
+    -   [语义化版本规范](1.standard/4.semantic-versioning.md)
 
 -   基础文档
--   操作文档
+-   实践文档
 
-    -   [参与贡献](3.操作文档\1参与贡献.md)
+    -   [参与贡献](3.practice/1.contributing.md)
 
 -   工具文档
 
