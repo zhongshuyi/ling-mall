@@ -19,6 +19,7 @@
 -   实践文档
 
     -   [参与贡献](3.practice/contributing.md)
+    -   [协作开发流程](3.practice\git-collaborative-development.md)
 
 -   工具文档
 
