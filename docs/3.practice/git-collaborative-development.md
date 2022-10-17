@@ -1,8 +1,10 @@
 # 信息来源
 
-知乎 [web 前端面试宝典](https://www.zhihu.com/people/webqian-duan-mian-shi-bao-dian) - [git 命名规范和协作开发流程](git 命名规范和协作开发流程 - web 前端面试宝典的文章 - 知乎 https://zhuanlan.zhihu.com/p/406903738)
+知乎 [web 前端面试宝典](https://www.zhihu.com/people/webqian-duan-mian-shi-bao-dian) - [git 命名规范和协作开发流程](https://zhuanlan.zhihu.com/p/406903738)
 
 稀土掘金 [稻草叔叔](https://juejin.cn/user/2031553216253559) - [您必须知道的 Git 分支开发规范](https://juejin.cn/post/6844903635533594632)
+
+CSND [Git 常用命令及方法大全](https://www.cnblogs.com/miracle77hp/articles/11163532.html)
 
 # 开始
 
@@ -35,12 +37,10 @@ git 版本库的两条主要的分支: `master` 和 `develop` .
 -   分支命名规范: `feature/` 开头,后面跟有意义的新功能名或模块名,如: `feature/user_management`(用户管理需求)、`feature/power_manangement`(电源管理)
 -   如果多人共用一个功能分支,那么本地代码 `push` 之前一定要经过自测,至少保证主流程走通,页面正常访问.
 
-**测试分支 test**
+**预发布分支 release**
 
--   当 `feature/XX` 分支开发完成后，合并代码到 `test` 分支并部署到测试环境，进入测试阶段
--   若测试的过程中存在 `bug` 需要修复，则由开发者在其功能分支 `feature/XX` 进行修复并合并到 `test` 分支回归测试
--   当测试通过后，需要将功能分支 `feature/XX` 合并到 `develop` 分支进行回归测试
--   测试分支 `test` 可能同时合并了多个开发分支 `feature/XX`，不同的开发需求可能上线时间不一样，所以 `test` 分支不可以直接合并到到 `develop`
+-   它是指发布正式版本之前（即合并到 Master 分支之前），我们可能需要有一个预发布的版本进行测试。
+-   预发布分支是从 Develop 分支上面分出来的，预发布结束以后，必须合并进 Develop 和 Master 分支。它的命名，可以采用 release-\*的形式。
 
 修复分支 hotfix
 
@@ -65,20 +65,20 @@ git 版本库的两条主要的分支: `master` 和 `develop` .
 
 **注意：** `git add<span> </span>.`和 `git add -A` 的区别 前者包括内容修改和新增但不包括删除 后者是所有
 
-2.合并到测试分支
+2.合并到开发分支
 
-当需求开发完成后，需要合并到测试分支
+当需求开发完成后，需要合并到分支
 
 ```text
-(feature/xxx)$: git checkout test             # 将当前功能分支 切换到测试分支
-(test)$: git pull origin test                 # 拉去test分支最新代码
+(feature/xxx)$: git checkout develop          # 将当前功能分支 切换到开发分支
+(test)$: git pull origin develop              # 拉去develop分支最新代码
 (test)$: git merge feature/xxx                # 将功能分支合并到测试分支
 # 若有冲突 需要现在本地解决完所有冲突
 (test|MERGING)$: git add -A                   # 将刚才修改的文件存放到暂存区
-(test|MERGING)$: git commit -m '解决文件冲突..' # 将暂存区代码添加到本地仓库中
-(test|MERGING)$: git push origin test         # 将本地分支版本上传到远程仓库
+(test|MERGING)$: git commit -m '解决文件冲突..'# 将暂存区代码添加到本地仓库中
+(test|MERGING)$: git push origin develop      # 将本地分支版本上传到远程仓库
 # 若没有冲突 直接push到远程仓库
-(test)$: git push origin test                 # 将本地分支版本上传到远程仓库
+(test)$: git push origin develop              # 将本地分支版本上传到远程仓库
 ```
 
 # 协作开发流程
@@ -94,6 +94,6 @@ git 版本库的两条主要的分支: `master` 和 `develop` .
 5. （本地-feature/XX 分支） 在 `feature/XX` 分支进行编码
 6. （本地-feature/XX 分支） 将本地多次提交信息进行合并成一次提交
 7. （本地-feature/XX 分支）将本地的 `feature/XX` 分支 push 推送到自己的远程个人空间仓库
-8. （远程-feature/XX 分支）将远程 `feature/XX` 分支提交 `Pull Request` 到公共仓库的 `feature/XX` 分支
-9. （公共仓库）将公共仓库与 `test` 分支进行合并，合并后进行测试，如果没有问题则将 公共仓库 `feature/XX` 与 `develop` 分支进行合并（test 分支不能与 `develop` 分支进行合并 ）
-10. 当一组功能被开发完成并测试通过后，则 `develop` 分支合并到 `master` 分支并发布版本号
+8. （远程-feature/XX 分支）将远程 `feature/XX` 分支提交 `Pull Request` 到公共仓库的 `develop` 分支
+9. （公共仓库）从 `develop` 分支分出 `release-*` 分支进行预发布
+10. （公共仓库）预发布测试结束后，将 `release-*` 分支与 `develop` 分支、`main` 分支进行合并
