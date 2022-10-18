@@ -1,4 +1,6 @@
-# 信息来源
+# 中文文档写作与排版规范
+
+## 信息来源
 
 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
 
@@ -6,7 +8,7 @@
 
 我是在看了 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines) 之后再发现 [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide) 的，我觉得都有道理，所以缝合起来
 
-# 目录
+## 目录
 
 - [信息来源](#信息来源)
 - [目录](#目录)
@@ -50,7 +52,7 @@
     -  [文件名](#文件名)
 - [工具](#工具)
 
-# 标题
+## 标题
 
 （1）一级标题下，不能直接出现三级标题。
 
@@ -112,7 +114,7 @@
 **（3）C**
 ```
 
-# 段落
+## 段落
 
 -   一个段落只能有一个主题，或一个中心句子。
 -   段落的中心句子放在段首，对全段内容进行概述。后面陈述的句子为中心句子服务。
@@ -121,7 +123,7 @@
 -   段落之间使用一个空行隔开。
 -   段落开头不要留出空白字符。
 
-# 引用
+## 引用
 
 引用第三方内容时，应注明出处。
 
@@ -141,7 +143,7 @@ One man’s constant is another man’s variable. — Alan Perlis
 本文部分图片来自 Wikipedia
 ```
 
-# 句子
+## 句子
 
 1）避免使用长句。
 
@@ -179,9 +181,9 @@ One man’s constant is another man’s variable. — Alan Perlis
 正确：用户必须拥有删除权限，才能删除此文件。
 ```
 
-# 空格
+## 空格
 
-## 中英文之间需要增加空格
+### 中英文之间需要增加空格
 
 正确：
 
@@ -199,7 +201,7 @@ One man’s constant is another man’s variable. — Alan Perlis
 
 例外：「豆瓣 FM」等产品名词，按照官方所定义的格式书写。
 
-## 中文与数字之间需要增加空格
+### 中文与数字之间需要增加空格
 
 正确：
 
@@ -211,7 +213,7 @@ One man’s constant is another man’s variable. — Alan Perlis
 >
 > 今天出去买菜花了5000元。
 
-## 数字与单位之间需要增加空格
+### 数字与单位之间需要增加空格
 
 正确：
 
@@ -235,7 +237,7 @@ One man’s constant is another man’s variable. — Alan Perlis
 >
 > 新 MacBook Pro 有 15 % 的 CPU 性能提升。
 
-## 全角标点与其他字符之间不加空格
+### 全角标点与其他字符之间不加空格
 
 正确：
 
@@ -247,13 +249,13 @@ One man’s constant is another man’s variable. — Alan Perlis
 >
 > 刚刚买了一部 iPhone， 好开心！
 
-## 用 `text-spacing` 来挽救？
+### 用 `text-spacing` 来挽救？
 
 CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#text-spacing-property) 和 Microsoft 的 [`-ms-text-autospace`](<https://msdn.microsoft.com/library/ms531164(v=vs.85).aspx>) 可以实现自动为中英文之间增加空白。不过目前并未普及，另外在其他应用场景，例如 macOS、iOS、Windows 等用户界面目前并不存在这个特性，所以请继续保持随手加空格的习惯。
 
-# 标点符号
+## 标点符号
 
-## 原则
+### 原则
 
 （1）中文语句的标点符号，均应该采取全角符号，这样可以与全角文字保持视觉的一致。
 
@@ -263,7 +265,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 （4）点号（句号、逗号、顿号、分号、冒号）不得出现在标题的末尾，而标号（引号、括号、破折号、省略号、书名号、着重号、间隔号、叹号、问号）可以。
 
-## 句号
+### 句号
 
 （1）中文语句的结尾处应该用全角句号（`。`）。
 
@@ -275,13 +277,13 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 正确：关于文件的输出，请参照第 1.3 节（见第 26 页）。
 ```
 
-## 逗号
+### 逗号
 
 （1）逗号（`，`）表示句子内部的一般性停顿。
 
 （2）注意避免“一逗到底”，即整个段落除了结尾，全部停顿都使用逗号。
 
-## 顿号
+### 顿号
 
 （1）句子内部的并列词，应该用全角顿号(`、`) 分隔，而不用逗号，即使并列词是英语也是如此。
 
@@ -305,11 +307,11 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 正确：我最欣赏的科技公司有 Google、Facebook、腾讯、阿里和百度等。
 ```
 
-## 分号
+### 分号
 
 （1）分号（`；`）表示复句内部并列分句之间的停顿。
 
-## 引号
+### 引号
 
 （1）引用时，应该使用全角双引号（`“ ”`），注意前后双引号不同。
 
@@ -323,7 +325,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 例句：鲍勃解释道：“我要放音乐，可萨利说，‘不行！’。”
 ```
 
-## 括号
+### 括号
 
 （1）补充说明时，使用全角圆括号（`（）`），括号前后不加空格。
 
@@ -340,7 +342,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 | `< >` |       angled brackets       | 尖括号 |
 | `( )` |         parentheses         | 圆括号 |
 
-## 冒号
+### 冒号
 
 （1）全角冒号（`：`）常用在需要解释的词语后边，引出解释和说明。
 
@@ -354,7 +356,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 例句：早上 8:00
 ```
 
-## 省略号
+### 省略号
 
 （1）省略号（`⋯⋯`）表示语句未完、或者语气的不连续。
 
@@ -370,13 +372,13 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 正确：我们为会餐准备了香蕉、苹果、梨等各色水果。
 ```
 
-## 感叹号
+### 感叹号
 
 （1）应该使用平静的语气叙述，尽量避免使用感叹号（`！`）。
 
 （2）不得多个感叹号连用，比如 `！！`和 `!!!`。
 
-## 破折号
+### 破折号
 
 （1）破折号 `————`一般用于进一步解释。
 
@@ -388,7 +390,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 例句：直觉 —— 尽管它并不总是可靠的 —— 告诉我，这事可能出了些问题。
 ```
 
-## 连接号
+### 连接号
 
 （1）连接号用于连接两个类似的词。
 
@@ -417,7 +419,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 例句：周围温度：-20 °C 至 -10 °C
 ```
 
-## 不重复使用标点符号
+### 不重复使用标点符号
 
 即使中国大陆的标点符号用法允许重复使用标点符号，但是这么做会破坏句子的美观性。
 
@@ -437,11 +439,11 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 >
 > 她竟然对你说「喵」？！？！？？！！
 
-# 全角和半角
+## 全角和半角
 
 不明白什么是全角（全形）与半角（半形）符号？请查看维基百科条目『[全角和半角](https://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2)』。
 
-## 使用全角中文标点
+### 使用全角中文标点
 
 正确：
 
@@ -459,7 +461,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 >
 > 核磁共振成像(NMRI)是什么原理都不知道?JFGI!
 
-## 数字使用半角字符
+### 数字使用半角字符
 
 正确：
 
@@ -471,7 +473,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 例外：在设计稿、宣传海报中如出现极少量数字的情形时，为方便文字对齐，是可以使用全角数字的。
 
-## 遇到完整的英文整句、特殊名词，其内容使用半角标点
+### 遇到完整的英文整句、特殊名词，其内容使用半角标点
 
 正确：
 
@@ -485,9 +487,9 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 >
 > 推荐你阅读《Hackers＆Painters：Big Ideas from the Computer Age》，非常的有趣。
 
-# 名词
+## 名词
 
-## 专有名词使用正确的大小写
+### 专有名词使用正确的大小写
 
 大小写相关用法原属于英文书写范畴，不属于本 wiki 讨论内容，在这里只对部分易错用法进行简述。
 
@@ -521,7 +523,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 注意：当网页中需要配合整体视觉风格而出现全部大写／小写的情形，HTML 中请使用标淮的大小写规范进行书写；并通过 `text-transform: uppercase;`／`text-transform: lowercase;` 对表现形式进行定义。
 
-## 不要使用不地道的缩写
+### 不要使用不地道的缩写
 
 正确：
 
@@ -531,11 +533,11 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 > 我们需要一位熟悉 Ts、h5，至少理解一种框架（如 RJS、nextjs）的 FED。
 
-# 争议
+## 争议
 
 以下用法略带有个人色彩，即：无论是否遵循下述规则，从语法的角度来讲都是**正确**的。
 
-## 链接之间增加空格
+### 链接之间增加空格
 
 用法：
 
@@ -549,7 +551,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 >
 > 访问我们网站的最新动态，请[点击这里](#)进行订阅！
 
-# 写作风格
+## 写作风格
 
 1）尽量不使用被动语态，改为使用主动语态。
 
@@ -604,7 +606,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 正确：此设备必须在技师的指导下使用，且指导技师必须接受过由本公司举办的正式设备培训。
 ```
 
-# 英文处理
+## 英文处理
 
 （1）英文原文如果使用了复数形式，翻译成中文时，应该将其还原为单数形式。
 
@@ -651,9 +653,9 @@ IOC（International Olympic Committee，国际奥林匹克委员会）。这样�
 “online transaction processing”（在线事务处理）不是专有名词，不应大写。
 ```
 
-# 文档体系
+## 文档体系
 
-## 结构
+### 结构
 
 软件手册是一部完整的书，建议采用下面的结构。
 
@@ -678,7 +680,7 @@ IOC（International Olympic Committee，国际奥林匹克委员会）。这样�
 -   [Redux 手册](https://redux.js.org/introduction/getting-started)
 -   [Atom 手册](http://flight-manual.atom.io/)
 
-## 文件名
+### 文件名
 
 文档的文件名不得含有空格。
 
@@ -708,7 +710,7 @@ IOC（International Olympic Committee，国际奥林匹克委员会）。这样�
 正确：advanced-usage.md
 ```
 
-# 工具
+## 工具
 
 | 仓库                                                                                                                            | 语言                   |
 | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |

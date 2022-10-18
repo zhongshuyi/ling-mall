@@ -1,4 +1,6 @@
-# 信息来源
+# Git 提交信息规范
+
+## 信息来源
 
 CSDN [半夏\_2021](https://blog.csdn.net/fd2025) [Git 提交规范](https://blog.csdn.net/fd2025/article/details/124543690)
 
@@ -6,7 +8,7 @@ CSDN [半夏\_2021](https://blog.csdn.net/fd2025) [Git 提交规范](https://blo
 
 知乎 [leohxj](https://www.zhihu.com/people/leohxj) [优雅的提交你的 Git Commit Message](https://zhuanlan.zhihu.com/p/34223150)
 
-# 开始
+## 开始
 
 Git 是目前世界上最先进的分布式版本控制系统，在我们平时的项目开发中已经广泛使用。而当我们使用 Git 提交代码时，都需要写 Commit Message 提交说明才能够正常提交。
 
@@ -24,7 +26,7 @@ Git 是目前世界上最先进的分布式版本控制系统，在我们平时�
 [可选的脚注]
 ```
 
-# 页眉
+## 页眉
 
 以下为页眉
 
@@ -34,7 +36,7 @@ Git 是目前世界上最先进的分布式版本控制系统，在我们平时�
 
 页眉中必须有类型与描述，强制支持的类型名是 `fix` 和 `feat`，同样支持 `Angular` 准则中推荐的其他类型
 
-## 类型
+### 类型
 
 其中 Angular 准则中的类型有：
 
@@ -55,15 +57,15 @@ Git 是目前世界上最先进的分布式版本控制系统，在我们平时�
 3. `chore` : 改变构建流程、或者增加依赖库、工具等
 4. `revert` : 回滚到上一个版本
 
-## 作用域
+### 作用域
 
 作用域（scope）表示此次提交影响的范围。比如可以取值 api，表明只影响了接口
 
-## 主题
+### 主题
 
 主题（subject）描述是简短的一句话，简单说明此次提交的内容。
 
-# 正文与页尾
+## 正文与页尾
 
 正文（body）和页眉（footer）这两部分不是必须的
 
@@ -94,7 +96,7 @@ BREANKING CHANGE：需要重新npm install，使用npm run cm代替git commit
 feat(登录）：添加登录接口
 ```
 
-# 规范
+## 规范
 
 结合[RFC2019](https://www.ietf.org/rfc/rfc2119.txt)，在下面规范中使用关键字来指示需求级别
 
@@ -120,7 +122,7 @@ feat(登录）：添加登录接口
 -   页脚**必须**包含不兼容修改、额外链接、问题引用和其他元信息
 -   除了 `feat`和 `fix`以外的类型**可以**在提交信息中使用
 
-# 示例
+## 示例
 
 只有页眉和页尾
 
@@ -146,7 +148,7 @@ see the issue for details on the typos fixed
 fixes issue #12
 ```
 
-# 工具
+## 工具
 
 虽然有了规范，但是还是无法保证每个人都能够遵守相应的规范，因此就需要使用一些工具来保证大家都能够提交符合规范的 Commit Message
 
