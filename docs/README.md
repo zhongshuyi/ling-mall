@@ -16,6 +16,7 @@
     -   [README 文件规范](1.standard/readme-standard.md)
     -   [Git 提交信息规范](1.standard/git-commit-standard.md)
     -   [语义化版本规范](1.standard/semantic-versioning.md)
+    -   [Java 编程规约](1.standard/java-standard.md)
 
 -   基础文档
 
