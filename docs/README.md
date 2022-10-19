@@ -20,7 +20,7 @@
 
 -   基础文档
 
-    -   [Git 常用基础操作](docs/2.basics/git.md)
+    -   [Git 常用基础操作](2.basics/git.md)
 
 -   实践文档
 
